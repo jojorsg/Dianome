@@ -5,6 +5,3 @@ CREATE TABLE entregadores (
  tipo varchar(255) NOT NULL,
  PRIMARY KEY (id)
 )
-
-ALTER TABLE entregador
- ADD CONSTRAINT cpf_unico UNIQUE (cpf);
