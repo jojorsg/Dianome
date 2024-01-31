@@ -39,7 +39,7 @@ public class EntregadorController {
         return ResponseEntity.ok(dto);
     }
 
-    @PutMapping
+    @PutMapping("/{id}")
     public ResponseEntity<EntregadorDto> atualizar(@PathVariable @NotNull Long id, @RequestBody @Valid EntregadorDto dto) {
         EntregadorDto atualizado = service.atualizarEntregador(id, dto);
         return ResponseEntity.ok(atualizado);
