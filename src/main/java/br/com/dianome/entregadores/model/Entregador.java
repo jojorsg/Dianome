@@ -27,7 +27,7 @@ public class Entregador {
     @NotNull
     @Column(unique = true)
     @Size(min = 11, max = 11, message = "O CPF deve possuir 11 dígitos.")
-    private BigInteger cpf;
+    private String cpf;
 
     @NotBlank
     @Size(max = 100)
