@@ -2,6 +2,9 @@ package br.com.dianome.entregadores.controller;
 
 import br.com.dianome.entregadores.dto.EntregadorDto;
 import br.com.dianome.entregadores.service.EntregadorService;
+import io.swagger.v3.oas.annotations.OpenAPIDefinition;
+import io.swagger.v3.oas.annotations.info.Contact;
+import io.swagger.v3.oas.annotations.info.Info;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,6 +19,16 @@ import java.net.URI;
 
 @RestController
 @RequestMapping("/entregadores")
+@OpenAPIDefinition(
+        info = @Info(
+                title = "Entregadores",
+                description = "API dos Entregadores",
+                version = "1.000",
+                contact = @Contact(
+                        name = "Josué Roberto",
+                        url = "https://www.linkedin.com/in/josu%C3%A9-roberto-santana",
+                        email = "josueroberto099@gmail.com")
+        ))
 public class EntregadorController {
 
     @Autowired
